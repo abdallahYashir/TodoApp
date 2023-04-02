@@ -1,0 +1,30 @@
+.new-item{
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+    width: 30vw;
+}
+
+.new-item input {
+    margin-right: 1rem;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+    /* Your CSS styles for mobile devices go here */
+    .new-item{
+        width: 60vw;
+    }
+    
+  }
+  
+  /* Styles for tablets */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Your CSS styles for tablets go here */
+  }
+  
+  /* Styles for laptops and desktops */
+  @media (min-width: 1024px) {
+    /* Your CSS styles for laptops and desktops go here */
+  }
+  

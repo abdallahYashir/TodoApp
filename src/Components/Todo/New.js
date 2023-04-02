@@ -3,8 +3,9 @@ import "./New.css";
 
 export default function ToDoNew() {
   return (
-    <div>
-      <input type="text" class="form-control" placeholder="Enter your name" />
+    <div className="new-item">
+      <input type="text" class="form-control" placeholder="New Todo Item" />
+      <button className="btn btn-primary">Add</button>
     </div>
   );
 }
