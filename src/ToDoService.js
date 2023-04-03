@@ -1,12 +1,18 @@
 import LocalStorageService from "./localStorageService";
 
-class TodoService {
+export default class TodoService {
   constructor() {
-    this.todos = [...this.loadTodos()];
+    this.todos = this.loadTodos() || [];
   }
 
   addTodo = (text) => {
-    const newTodo = { id: Date.now(), text, completed: false, archived: false };
+    const newTodo = {
+      id: Date.now(),
+      text,
+      completed: false,
+      archived: false,
+      position: 1,
+    };
     this.todos.push(newTodo);
     return newTodo;
   };
@@ -48,7 +54,7 @@ class TodoService {
   };
 
   loadTodos = () => {
-    this.todos = LocalStorageService.get("todos") || [];
+    this.todos = LocalStorageService.get("todos");
   };
 
   save = () => {

@@ -8,3 +8,5 @@ const LocalStorageService = {
     return value ? JSON.parse(value) : null;
   },
 };
+
+export default LocalStorageService;
