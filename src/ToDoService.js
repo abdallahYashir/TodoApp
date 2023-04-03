@@ -49,7 +49,7 @@ export default class TodoService {
     }
   };
 
-  getAllTodos = () => {
+  getAllTodos = async () => {
     return this.todos;
   };
 
@@ -58,6 +58,6 @@ export default class TodoService {
   };
 
   save = () => {
-    LocalStorageService.set("todos", this.todos);
+    LocalStorageService.save("todos", this.todos);
   };
 }
